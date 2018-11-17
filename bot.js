@@ -23,7 +23,7 @@ var guilds = {};
 
 
 client.on('ready',  () => {
-    console.log('تم تشغيل : Dark  ');
+    console.log('تم تشغيل : Bot  ');
     console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -44,22 +44,22 @@ client.on('message', message => {
     const days = millis / 1000 / 60 / 60 / 24;
     let roles = client.guilds.get(message.guild.id).roles.map(r => r.name);
     var embed  = new Discord.RichEmbed()
-    .setAuthor("[ Dark Bot ]", " https://images-ext-2.discordapp.net/external/ahNXTY5REo9rE5-6oa5XGyzSrJis3qbk7eBUv1sEiYI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/459725014237970492/558a210e07b9ae2504e427a4c7c6d297.png?width=455&height=455")
-    .addField("**[ Dark Prefix] :**","**[ + ]**" , true)
-    .addField("** [ Dark ID ] **", "**"+"459725014237970492"+"**",true)
-    .addField("** [ Dark ] **","** دراجون**")
+    .setAuthor("[ my Bot ]", " https://images-ext-2.discordapp.net/external/ahNXTY5REo9rE5-6oa5XGyzSrJis3qbk7eBUv1sEiYI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/459725014237970492/558a210e07b9ae2504e427a4c7c6d297.png?width=455&height=455")
+    .addField("**[ my Prefix] :**","**[ + ]**" , true)
+    .addField("** [ my ID ] **", "**"+"459725014237970492"+"**",true)
+    .addField("** [ bot ] **","** :> **")
     .addField("**[ Bot Developer ]**","<@!202745501345382400> [<@!461766920400535552>]")
     .addField("**[ Servers ]**" , "**"+`${client.guilds.size}`+" Server**",true)
     .addField("**[ Users ] **",`** ${client.users.size} User**`)
     .setThumbnail(" https://images-ext-2.discordapp.net/external/ahNXTY5REo9rE5-6oa5XGyzSrJis3qbk7eBUv1sEiYI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/459725014237970492/558a210e07b9ae2504e427a4c7c6d297.png?width=455&height=455")
     .setColor("ffffff")
-    .setFooter(`+help to see all Dark commands `, ' https://images-ext-2.discordapp.net/external/ahNXTY5REo9rE5-6oa5XGyzSrJis3qbk7eBUv1sEiYI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/459725014237970492/558a210e07b9ae2504e427a4c7c6d297.png?width=455&height=455')
+    .setFooter(`+help to see all bot commands `, ' https://images-ext-2.discordapp.net/external/ahNXTY5REo9rE5-6oa5XGyzSrJis3qbk7eBUv1sEiYI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/459725014237970492/558a210e07b9ae2504e427a4c7c6d297.png?width=455&height=455')
     message.channel.sendEmbed(embed)
     }
     });
 
 client.on("guildDelete", guild => {
-    console.log(` Dark Left From Server -- = ${guild.name} = -- , Server Owner -- = ${guild.owner.user.username} = --`)
+    console.log(` bot Left From Server -- = ${guild.name} = -- , Server Owner -- = ${guild.owner.user.username} = --`)
    
 var g= guild.members.size
 var i= guild.iconURL
@@ -67,8 +67,8 @@ var i= guild.iconURL
 const embed = new Discord.RichEmbed()
   
                    .setColor("RANDOM")
-                .setFooter(` ©  Dark™ `)
-                .setTitle(" Dark Left Server !")
+                .setFooter(` ©  bot™ `)
+                .setTitle(" bot Left Server !")
                 .addField("**Guild Name:**", guild.name )
                  .addField("**Owner:**", guild.owner.user.username )
                  .addField("**Owner id:**", guild.owner.user.id )
@@ -79,7 +79,7 @@ client.channels.get("427613133826162698").send({ embed: embed });
 
 
 client.on("guildCreate", guild => {
-console.log(` Dark Added From Server -- = ${guild.name} = -- , Server Owner -- = ${guild.owner.user.username} = --`)
+console.log(` bot Added From Server -- = ${guild.name} = -- , Server Owner -- = ${guild.owner.user.username} = --`)
 
 var g= guild.members.size
 var i= guild.iconURL
@@ -87,8 +87,8 @@ var i= guild.iconURL
 const embed = new Discord.RichEmbed()
   
                    .setColor("RANDOM")
-                .setFooter(` ©  Dark™ `)
-                .setTitle(" Dark Added To Server !")
+                .setFooter(` ©  bot™ `)
+                .setTitle(" bot Added To Server !")
                 .addField("**Guild Name:**", guild.name )
                  .addField("**Owner:**", guild.owner.user.username )
                  .addField("**MEMBER COUNT:**", g )
