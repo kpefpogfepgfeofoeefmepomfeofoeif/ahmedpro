@@ -202,7 +202,7 @@ let args = message.content.split(' ').slice(1).join(' ');
            defineduser = firstMentioned;
        }
 
-       const w = ['./img/id6.png','./img/id2.png','./img/id3.png','./img/id41.png','./img/id5.png'];
+       const w = ['./id6.png','./id2.png','./id3.png','./id41.png','./id5.png'];
        var Canvas = require('canvas')
 var jimp = require('jimp')
 
@@ -234,7 +234,7 @@ const days = millis / 1000 / 60 / 60 / 24;
        ctx.antialias = 'subpixel';
  
        fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
-           if (err) return console.log(err);
+           if (err) return console.log err);
            let BG = Canvas.Image;
            let ground = new Image;
            ground.src = Background;
@@ -3723,7 +3723,7 @@ client.on("message", message => {
                 if (message.content.startsWith(prefix + 'ركب')) {
                   if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
                 
-                const type = require('./fkk/RKB.json');
+                const type = require('./RKB.json');
                 const item = type[Math.floor(Math.random() * type.length)];
                 const filter = response => {
                     return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
@@ -3755,7 +3755,7 @@ client.on("message", message => {
                 if (message.content.startsWith(prefix + 'رياضيات')) {
                   if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
                 
-                const type = require('./fkk/math.json');
+                const type = require('./math.json');
                 const item = type[Math.floor(Math.random() * type.length)];
                 const filter = response => {
                     return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
@@ -3787,7 +3787,7 @@ client.on("message", message => {
                     if (message.content.startsWith(prefix + 'عواصم')) {
                         if(!message.channel.guild) return
                      
-                    const type = require('./fkk/3wasm.json');
+                    const type = require('./3wasm.json');
                     const item = type[Math.floor(Math.random() * type.length)];
                     const filter = response => {
                         return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
@@ -3820,7 +3820,7 @@ client.on("message", message => {
             if (message.content.startsWith(prefix + 'شقلب')) {
                 if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
             
-            const type = require('./fkk/SHAKLEB.json');
+            const type = require('./SHAKLEB.json');
             const item = type[Math.floor(Math.random() * type.length)];
             const filter = response => {
                 return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
@@ -3852,7 +3852,7 @@ client.on("message", message => {
                   if (message.content.startsWith(prefix + 'كتابة')) {
                     if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
                   
-                  const type = require('./fkk/type.json');
+                  const type = require('./type.json');
                   const item = type[Math.floor(Math.random() * type.length)];
                   const filter = response => {
                       return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
